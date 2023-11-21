@@ -9,3 +9,7 @@ run the program without setting up Apache.
 To use, simply run
 
 `perl cgi_runner.pl /path/to/your/perl/cgi/script`
+
+Note: all the dependencies are managed using Nix. You should use Nix and direnv to
+use this project, since it will install all the dependencies and take care of everything
+for you.

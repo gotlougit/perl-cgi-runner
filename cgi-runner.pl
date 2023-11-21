@@ -6,7 +6,6 @@
 use strict;
 use warnings;
 
-# Check if a script file is provided as a command-line argument
 if (@ARGV != 1) {
     die "Usage: $0 <script_file>\n";
 }
@@ -46,13 +45,9 @@ my $script_file = $ARGV[0];
         my $cgi = shift;
         print "HTTP/1.0 200 OK\r\n";
         my $out = qx(perl $script_file);
-        # Print the captured output
         print $out;
-        # Use the captured output in the CGI response
         $cgi->html($out);
     }
 }
 
-# start the server on port 8080
-MyWebServer->new(8085)->run();
-
+MyWebServer->new(8080)->run();

@@ -10,6 +10,9 @@ To use, simply run
 
 `perl cgi_runner.pl /path/to/your/perl/cgi/script`
 
+This opens a local web server on localhost:8080. You can use a web browser to request
+this page.
+
 Note: all the dependencies are managed using Nix. You should use Nix and direnv to
 use this project, since it will install all the dependencies and take care of everything
 for you.
